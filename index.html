@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Chapter 71 - An Owl That Fouls</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a150f;overflow:hidden;font-family:Georgia,serif;color:#d0ffcc}
+#story{position:absolute;inset:0;z-index:99;background:radial-gradient(#1a2f1a,#070e07);overflow:auto;padding:12px}
+.gold{color:#88ff66;text-shadow:0 0 8px #33aa22}
+.hud{position:absolute;background:rgba(10,25,12,0.92);border:2px solid #88ff66;border-radius:10px;padding:7px;font-family:monospace;z-index:10}
+#hudL{top:6px;left:6px;width:360px}
+#hudR{top:6px;right:6px;width:410px;font-size:11px}
+#hudB{bottom:6px;left:6px;width:500px;display:none;max-height:320px;overflow:auto}
+#map{position:absolute;bottom:6px;right:6px;width:170px;height:170px;background:#000;border:2px solid #88ff66;border-radius:10px;z-index:10}
+.bar{width:100%;height:13px;background:#000;border:1px solid #88ff66;border-radius:6px;margin:3px 0;overflow:hidden}
+.fill{height:100%;transition:width .3s}
+button{background:linear-gradient(135deg,#33aa22,#88ff66);color:#000;border:0;padding:6px 10px;margin:3px;border-radius:6px;font-weight:bold;cursor:pointer}
+button:hover{transform:scale(1.05)}
+#msg{position:absolute;top:45%;left:50%;transform:translate(-50%,-50%);background:#88ff66;color:#000;padding:10px 18px;border-radius:8px;display:none;z-index:20;font-weight:bold;text-align:center}
+</style>
+<script type="importmap">{"imports":{"three":"https://unpkg.com/three@0.160.0/build/three.module.js"}}</script>
+</head>
+<body>
+<div id="story">
+<h2 class="gold" style="text-align:center">Chapter 71: An Owl That Fouls<br>April 13 2020 - Aesop's Unpleasant Fables And The Rages Band</h2>
+<div style="max-width:860px;margin:10px auto;background:rgba(136,255,102,0.08);border:1px solid #88ff66;border-radius:8px;padding:10px;white-space:pre-wrap;font-size:11px;line-height:1.5">
+Chapter 1: Introduction To A Smelly Owl That Offends To Reject Unharmful Birds Once upon a time there lived in a jungle of a forest. Where there is an owl and other types of birds. This includes parrots, cranes, flamingos and many more. They are the most friendly birds in the forest. But there is a strange bird which is different from them. And it's because of the stinky pleasant and odor smells. All the living birds deny of not washing and cleaning properly of the birds body. And that is "An Owl That Fouls". And now at the sat of the first morning now an owl wants to befriendly of the birds in the jungle. And because it's already last 30 days rejected the owl. Because of the bad smell. Other birds wanted to foul the owl because they are offended that they don't befriend this creature. Because of bad odor and unpleasant smell. Until suddenly there is also the unpleasant animal who is the crocodile. The crocodile has a foul odor too that wants to get and chase an owl for dinner. The crocodile said, Hi bad smell owl. Will you be my friend? An owl said, Yes I am! As an owl wanted to befriend with a crocodile. A crocodile wanted to banish a stinky smelly owl. But because owl is intelligent it avoid the teeths of a crocodile very fast. Because that is the help of owl's wings to fly faster in terms of danger. As the story ends, when an owl escapes to the terrifying creature which is the crocodile in the jungle. A foul owl goes into the oasis. Wherein there is a coconut tree on it and a pond. An owl think it very carefully if it wants to have friends again. An owl don't want to seek complain so that no friends live been offend of it. As the change of ethics "An Owl That Fouls" is trying to clean it's body mess in the water just to remove it's dirty body. As "An Owl That Fouls" completely cleans it's own body. An owl is nothing to fear and worry about danger. An owl already change itself to say echos until other bird friends who rejected the owl that time summons help. Then the birds such as parrots, cranes, flamingos and many more returned back to an owl. And then the birds shocked what an owl it seems. The birds said, Oh! I can't believe it looks like an owl change It's best. But why is I so clearly that it's not mess and foul anymore. 
+Chapter 2: A Change Of Moral State Remains An Owl Returns It's Birds Friend By Facing It's Good Attitude Than Offensive And Foul Thoughts An owl said, it's because I needed you because I learn about you birds. The birds said, well yeah! You understand us? Well tell me your own story. An owl dictated it's own story that when an owl is lonely it's trapped by the crocodile and harshly escaped from it. It shows that its not offend anymore. If no one will offends the owl. It must been changed for good. It needs friends if you change for the better and not smelly as it offends as well. The birds understands it and said, Well owl that is the nice story. For now on you will the part of our friendship now. as the story ends, An owl face the good consequence and never been the part of confusing and a big trouble anymore. Moral Lesson: You might be learn to review your lesson. By only humble that you must been try to clean your own attitude. Or clean yourself because the reflection of others may affects if they will own or not. But if you wrongfully stinks your unrightful attitude then they will probably offend you. And some parts of it will not needed you help. Then suddenly put you in trouble or danger. That you must harshly escape the bad costs. Needy of friends never have a foul or smelly that stinks. Because a true connections needs a true good costs. Be they will be good all the time and not bad all the time for pride.
+</div>
+<center><p class="gold">Jungle Forest Owl Fouls | Parrots Cranes Flamingos Friendly | Stinky Odor Smell 30 Days Rejected Offended | Crocodile Foul Odor Hi Bad Smell Owl Will You Be My Friend | Intelligent Avoid Teeth Wings Fly Faster Danger | Oasis Coconut Tree Pond Clean Body Mess Remove Dirty Body | Change Best Not Mess Foul Anymore | Good Attitude Not Offensive Foul Thoughts | True Connections Needs True Good Costs</p>
+<p>WASD Fly Owl | E Clean Body Oasis Pond | Q Inventory | R Echo Call Friends | F Camera | Click Wing Attack</p>
+<button onclick="startGame()" style="font-size:20px;padding:12px 36px">PLAY NOW - AN OWL THAT FOULS - FAST</button></center>
+</div>
+
+<div class="hud" id="hudL">
+<div class="gold">Owl That Fouls Lv <span id="lv">1</span> - Jungle Forest</div>
+<div>Clean - Body Mess Remove Dirty Body Oasis Pond Coconut Tree</div><div class="bar"><div id="hp" class="fill" style="width:35%;background:linear-gradient(90deg,#33aa22,#88ff66)"></div></div>
+<div>Friendship - Parrots Cranes Flamingos Friendly Birds Return</div><div class="bar"><div id="friend" class="fill" style="width:25%;background:#ffcc33"></div></div>
+<div>Good Attitude - Not Offensive Foul Thoughts Humble Change Better</div><div class="bar"><div id="good" class="fill" style="width:30%;background:#33ccff"></div></div>
+<div>XP</div><div class="bar"><div id="xp" class="fill" style="width:0%;background:#9966ff"></div></div>
+<div style="font-size:10px">State: <span id="petTxt" class="gold">Fouls Smelly Stinky Odor 30 Days Rejected Offended</span><br><span id="stat">Jungle Forest Owl Wants Befriendly Birds Last 30 Days Rejected Bad Smell</span></div>
+</div>
+
+<div class="hud" id="hudR">
+<div class="gold" id="qM">MAIN: Jungle Forest Owl That Fouls Stinky Odor</div>
+<div id="qD">Once upon a time there lived in a jungle of a forest. Where there is an owl and other types of birds. This includes parrots, cranes, flamingos and many more. They are the most friendly birds in the forest. But there is a strange bird which is different from them. And it's because of the stinky pleasant and odor smells. All the living birds deny of not washing and cleaning properly of the birds body. And that is An Owl That Fouls. And now at the sat of the first morning now an owl wants to befriendly of the birds in the jungle. And because it's already last 30 days rejected the owl. Because of the bad smell. Other birds wanted to foul the owl because they are offended that they don't befriend this creature. Because of bad odor and unpleasant smell. Until suddenly there is also the unpleasant animal who is the crocodile. The crocodile has a foul odor too that wants to get and chase an owl for dinner. The crocodile said, Hi bad smell owl. Will you be my friend? An owl said, Yes I am! As an owl wanted to befriend with a crocodile. A crocodile wanted to banish a stinky smelly owl. But because owl is intelligent it avoid the teeths of a crocodile very fast. Because that is the help of owl's wings to fly faster in terms of danger. As the story ends, when an owl escapes to the terrifying creature which is the crocodile in the jungle. A foul owl goes into the oasis. Wherein there is a coconut tree on it and a pond. An owl think it very carefully if it wants to have friends again. An owl don't want to seek complain so that no friends live been offend of it. As the change of ethics An Owl That Fouls is trying to clean it's body mess in the water just to remove it's dirty body. As An Owl That Fouls completely cleans it's own body. An owl is nothing to fear and worry about danger. An owl already change itself to say echos until other bird friends who rejected the owl that time summons help. Then the birds such as parrots, cranes, flamingos and many more returned back to an owl. And then the birds shocked what an owl it seems. The birds said, Oh! I can't believe it looks like an owl change It's best. But why is I so clearly that it's not mess and foul anymore. An owl said, it's because I needed you because I learn about you birds. The birds said, well yeah! You understand us? Well tell me your own story. An owl dictated it's own story that when an owl is lonely it's trapped by the crocodile and harshly escaped from it. It shows that its not offend anymore. If no one will offends the owl. It must been changed for good. It needs friends if you change for the better and not smelly as it offends as well. The birds understands it and said, Well owl that is the nice story. For now on you will the part of our friendship now. as the story ends, An owl face the good consequence and never been the part of confusing and a big trouble anymore. Moral You might be learn to review your lesson By only humble that you must been try to clean your own attitude Or clean yourself because the reflection of others may affects if they will own or not But if you wrongfully stinks your unrightful attitude then they will probably offend you And some parts of it will not needed you help Then suddenly put you in trouble or danger That you must harshly escape the bad costs Needy of friends never have a foul or smelly that stinks Because a true connections needs a true good costs Be they will be good all the time and not bad all the time for pride</div>
+<hr><div id="qS" style="font-size:10px"></div>
+</div>
+
+<div class="hud" id="hudB">
+<h4 class="gold">Inventory - Jungle Forest</h4>
+<div id="inv" style="font-size:11px">
+🦉 An Owl That Fouls Stinky Pleasant Odor Smells Living Birds Deny Not Washing Cleaning Properly Birds Body<br>
+🦜 Parrots Cranes Flamingos Many More Most Friendly Birds Forest But Strange Bird Different Because Stinky Pleasant Odor Smells<br>
+🤢 Last 30 Days Rejected Owl Because Bad Smell Other Birds Wanted Foul Owl Because Offended Don't Befriend Creature Bad Odor Unpleasant Smell<br>
+🐊 Crocodile Unpleasant Animal Foul Odor Too Wants Get Chase Owl For Dinner Crocodile Hi Bad Smell Owl Will You Be My Friend Owl Yes I Am Befriend Crocodile Wanted Banish Stinky Smelly Owl But Because Owl Intelligent Avoid Teeths Crocodile Very Fast Help Owl's Wings Fly Faster Terms Danger<br>
+🏝️ Oasis Coconut Tree Pond Owl Escapes Terrifying Creature Crocodile Jungle Foul Owl Goes Into Oasis Coconut Tree Pond Think Carefully If Wants Have Friends Again Don't Want Seek Complain So No Friends Live Been Offend Change Ethics An Owl That Fouls Trying Clean Body Mess Water Remove Dirty Body Completely Cleans Own Body Nothing Fear Worry Danger Already Change Itself Say Echos Until Other Bird Friends Rejected That Time Summons Help Birds Parrots Cranes Flamingos Many More Returned Back To Owl Birds Shocked What Owl It Seems Oh I Can't Believe Looks Like Owl Change It's Best But Why So Clearly Not Mess Foul Anymore<br>
+💬 Owl It's Because I Needed You Because I Learn About You Birds Birds Well Yeah You Understand Us Tell Me Own Story Owl Dictated Own Story When Owl Lonely Trapped Crocodile Harshly Escaped It Shows Not Offend Anymore If No One Will Offends Owl Must Been Changed For Good Needs Friends If You Change For Better Not Smelly As It Offends Birds Understands Well Owl Nice Story For Now On You Will Part Of Our Friendship Now Owl Face Good Consequence Never Been Part Confusing Big Trouble Anymore<br>
+🌟 Moral Learn Review Lesson By Only Humble Must Been Try Clean Own Attitude Or Clean Yourself Because Reflection Others May Affects If They Will Own Or Not But If Wrongfully Stinks Unrightful Attitude Then They Will Probably Offend You Some Parts Not Needed You Help Then Suddenly Put You Trouble Danger Must Harshly Escape Bad Costs Needy Friends Never Have Foul Smelly Stinks Because True Connections Needs True Good Costs Be They Will Be Good All Time Not Bad All Time For Pride<br>
+</div>
+<button onclick="cleanBody()">E Clean Body Mess Oasis Pond - Remove Dirty Body</button>
+<button onclick="echoCall()">R Echo Call Friends Parrots Cranes Flamingos</button>
+<button onclick="this.parentElement.style.display='none'">Close</button>
+</div>
+
+<canvas id="map"></canvas>
+<div id="msg">CLEANED!</div>
+
+<script type="module">
+import * as THREE from 'three';
+let scene,camera,renderer,player,keys={},on=false,fp=false;
+let ST={clean:35,friend:25,good:30,xp:0,lv:1,hp:100};
+let enemies=[],ponds=[],npcs=[];
+window.startGame=()=>{document.getElementById('story').style.display='none';init();};
+
+function init(){
+ on=true;
+ scene=new THREE.Scene(); scene.background=new THREE.Color(0x0a150f); scene.fog=new THREE.Fog(0x0a150f,12,45);
+ camera=new THREE.PerspectiveCamera(70,innerWidth/innerHeight,0.1,500);
+ renderer=new THREE.WebGLRenderer({antialias:true}); renderer.setSize(innerWidth,innerHeight); document.body.appendChild(renderer.domElement);
+ scene.add(new THREE.AmbientLight(0x667755,0.7));
+ let dl=new THREE.DirectionalLight(0xffffff,0.8); dl.position.set(10,15,10); scene.add(dl);
+ let ground=new THREE.Mesh(new THREE.PlaneGeometry(130,130), new THREE.MeshStandardMaterial({color:0x142614})); ground.rotation.x=-Math.PI/2; scene.add(ground);
+ for(let i=0;i<15;i++){
+   let tr=new THREE.Mesh(new THREE.CylinderGeometry(0.3,0.5,3,6), new THREE.MeshStandardMaterial({color:0x2d4a22}));
+   let x=(Math.random()-0.5)*60, z=(Math.random()-0.5)*60;
+   if(Math.abs(x)<10&&Math.abs(z)<10) continue;
+   tr.position.set(x,1.5,z); scene.add(tr);
+ }
+ for(let i=0;i<3;i++){
+   let p=new THREE.Mesh(new THREE.CylinderGeometry(2.2,2.2,0.15,12), new THREE.MeshStandardMaterial({color:0x2244aa,transparent:true,opacity:0.7}));
+   p.position.set((Math.random()-0.5)*24,0.1,(Math.random()-0.5)*24); scene.add(p); ponds.push(p);
+   let coco=new THREE.Mesh(new THREE.CylinderGeometry(0.15,0.18,2.2,6), new THREE.MeshStandardMaterial({color:0x6d4c41}));
+   coco.position.set(p.position.x+1.2,1.1,p.position.z); scene.add(coco);
+ }
+ let g=new THREE.Group();
+ let body=new THREE.Mesh(new THREE.CapsuleGeometry(0.32,0.6,4,8), new THREE.MeshStandardMaterial({color:0x8d6e63})); body.position.y=0.9; g.add(body);
+ let head=new THREE.Mesh(new THREE.SphereGeometry(0.35,8,8), new THREE.MeshStandardMaterial({color:0xfff8e1})); head.position.y=1.55; g.add(head);
+ let wingL=new THREE.Mesh(new THREE.BoxGeometry(0.5,0.1,0.7), new THREE.MeshStandardMaterial({color:0x5d4037})); wingL.position.set(-0.45,0.9,0); g.add(wingL);
+ let wingR=wingL.clone(); wingR.position.x=0.45; g.add(wingR);
+ g.position.set(0,0,10); scene.add(g); player=g;
+
+ function addNPC(x,z,name,txt,col){
+   let m=new THREE.Mesh(new THREE.CapsuleGeometry(0.3,0.7,4,8), new THREE.MeshStandardMaterial({color:col}));
+   m.position.set(x,0.8,z); m.userData={txt:txt,name:name}; scene.add(m); npcs.push(m); return m;
+ }
+ addNPC(-8,2,"Parrots Cranes Flamingos Friendly Birds Forest","They are the most friendly birds in the forest. But there is a strange bird which is different from them. And it's because of the stinky pleasant and odor smells. All the living birds deny of not washing and cleaning properly of the birds body. And that is An Owl That Fouls. Last 30 days rejected the owl. Because of the bad smell. Other birds wanted to foul the owl because they are offended that they don't befriend this creature. Because of bad odor and unpleasant smell",0x88ff66);
+ addNPC(8,2,"Birds Shocked Oh Can't Believe Looks Like Owl Change It's Best Not Mess Foul Anymore","Oh! I can't believe it looks like an owl change It's best. But why is I so clearly that it's not mess and foul anymore. An owl said, it's because I needed you because I learn about you birds. The birds said, well yeah! You understand us? Well tell me your own story. Birds understands Well owl that is the nice story. For now on you will the part of our friendship now",0xffcc33);
+ addNPC(0,7,"Oasis Coconut Tree Pond Clean Body Mess Remove Dirty Body Change Ethics","When an owl escapes to the terrifying creature which is the crocodile in the jungle. A foul owl goes into the oasis. Wherein there is a coconut tree on it and a pond. An owl think it very carefully if it wants to have friends again. An owl don't want to seek complain so that no friends live been offend of it. As the change of ethics An Owl That Fouls is trying to clean it's body mess in the water just to remove it's dirty body. As An Owl That Fouls completely cleans it's own body. An owl is nothing to fear and worry about danger. An owl already change itself to say echos",0x33ccff);
+
+ function addEnemy(x,z,name,txt,boss){
+   let me=new THREE.Mesh(new THREE.BoxGeometry(boss?1.4:0.9,0.6,1.2), new THREE.MeshStandardMaterial({color:boss?0x1a3300:0x334422}));
+   me.position.set(x,0.5,z); me.userData={hp:boss?135:70,max:boss?135:70,boss:boss,name:name,txt:txt}; scene.add(me); enemies.push(me);
+ }
+ addEnemy(0,-13,"Crocodile Unpleasant Foul Odor Hi Bad Smell Owl Will You Be My Friend Wants Get Chase Owl Dinner Teeths","Crocodile has a foul odor too that wants to get and chase an owl for dinner. The crocodile said, Hi bad smell owl. Will you be my friend? An owl said, Yes I am! As an owl wanted to befriend with a crocodile. A crocodile wanted to banish a stinky smelly owl. But because owl is intelligent it avoid the teeths of a crocodile very fast. Because that is the help of owl's wings to fly faster in terms of danger",true);
+ addEnemy(-11,-8,"Stinky Pleasant Odor Smells 30 Days Rejected Offended Foul Owl Bad Smell","All the living birds deny of not washing and cleaning properly of the birds body. And that is An Owl That Fouls. And now at the sat of the first morning now an owl wants to befriendly of the birds in the jungle. And because it's already last 30 days rejected the owl. Because of the bad smell. Other birds wanted to foul the owl because they are offended that they don't befriend this creature. Because of bad odor and unpleasant smell",false);
+ addEnemy(11,-8,"Confusing Big Trouble Danger Bad Costs Harshly Escape Foul Smelly Stinks Pride","You might be learn to review your lesson. By only humble that you must been try to clean your own attitude. Or clean yourself because the reflection of others may affects if they will own or not. But if you wrongfully stinks your unrightful attitude then they will probably offend you. And some parts of it will not needed you help. Then suddenly put you in trouble or danger. That you must harshly escape the bad costs. Needy of friends never have a foul or smelly that stinks. Because a true connections needs a true good costs",false);
+
+ window.addEventListener('keydown',e=>{
+   keys[e.key.toLowerCase()]=true;
+   let k=e.key.toLowerCase();
+   if(k=='f') fp=!fp;
+   if(k=='q'){let el=document.getElementById('hudB'); el.style.display=el.style.display=='none'?'block':'none';}
+   if(k=='e') cleanBody();
+   if(k=='r') echoCall();
+ });
+ window.addEventListener('keyup',e=>keys[e.key.toLowerCase()]=false);
+ window.addEventListener('mousedown',()=>{if(on) attack();});
+ renderer.domElement.addEventListener('click',()=>{renderer.domElement.requestPointerLock();});
+ window.addEventListener('mousemove',e=>{if(on&&document.pointerLockElement) player.rotation.y-=e.movementX*0.003;});
+ animate(); updateHUD();
+}
+
+function attack(){
+ enemies.forEach(en=>{
+   if(en.position.distanceTo(player.position)<2.8){
+     en.userData.hp-=22+ST.good*0.2;
+     if(en.userData.hp<=0){scene.remove(en); enemies=enemies.filter(x=>x!=en); ST.xp+=en.userData.boss?65:28; ST.friend=Math.min(100,ST.friend+15); ST.good=Math.min(100,ST.good+10); showM("Foul Defeated! Wings Fly Faster!"); if(enemies.length==0) win();}
+   }
+ });
+ ponds.forEach(p=>{if(p.position.distanceTo(player.position)<3.5){ST.clean=Math.min(100,ST.clean+28); ST.good=Math.min(100,ST.good+8); showM("Cleaned! Body Mess Removed! Not Smelly!");}});
+ npcs.forEach(n=>{if(n.position.distanceTo(player.position)<3){document.getElementById('qD').innerText=n.userData.txt;}});
+ updateHUD();
+}
+window.cleanBody=()=>{
+ ST.clean=Math.min(100,ST.clean+26); ST.good=Math.min(100,ST.good+16); ST.friend=Math.min(100,ST.friend+10); ST.xp+=20;
+ document.getElementById('qD').innerText="As the change of ethics An Owl That Fouls is trying to clean it's body mess in the water just to remove it's dirty body. As An Owl That Fouls completely cleans it's own body. An owl is nothing to fear and worry about danger. An owl already change itself to say echos until other bird friends who rejected the owl that time summons help. Then the birds such as parrots, cranes, flamingos and many more returned back to an owl. And then the birds shocked what an owl it seems. The birds said, Oh! I can't believe it looks like an owl change It's best. But why is I so clearly that it's not mess and foul anymore. You might be learn to review your lesson. By only humble that you must been try to clean your own attitude. Or clean yourself because the reflection of others may affects if they will own or not. True connections needs true good costs. Be they will be good all the time and not bad all the time for pride";
+ showM("Oasis Pond! Coconut Tree! Body Clean! Not Mess Foul Anymore!"); updateHUD(); if(ST.clean>=88&&ST.friend>=65) win();
+};
+window.echoCall=()=>{
+ ST.friend=Math.min(100,ST.friend+14); ST.good=Math.min(100,ST.good+10); ST.xp+=14;
+ document.getElementById('qD').innerText="An owl already change itself to say echos until other bird friends who rejected the owl that time summons help. Then the birds such as parrots, cranes, flamingos and many more returned back to an owl. And then the birds shocked what an owl it seems. The birds said, Oh! I can't believe it looks like an owl change It's best. But why is I so clearly that it's not mess and foul anymore. An owl said, it's because I needed you because I learn about you birds. The birds said, well yeah! You understand us? Well tell me your own story. An owl dictated it's own story that when an owl is lonely it's trapped by the crocodile and harshly escaped from it. It shows that its not offend anymore. If no one will offends the owl. It must been changed for good. It needs friends if you change for the better and not smelly as it offends as well. The birds understands it and said, Well owl that is the nice story. For now on you will the part of our friendship now. True connections needs true good costs";
+ showM("Echo! Parrots Cranes Flamingos Returned! Friendship!"); updateHUD();
+};
+function showM(t){let el=document.getElementById('msg'); el.innerText=t; el.style.display='block'; setTimeout(()=>el.style.display='none',1300);}
+function updateHUD(){
+ document.getElementById('hp').style.width=ST.clean+"%";
+ document.getElementById('friend').style.width=ST.friend+"%";
+ document.getElementById('good').style.width=ST.good+"%";
+ document.getElementById('xp').style.width=ST.xp+"%";
+ document.getElementById('petTxt').innerText=ST.clean>70?"Cleaned! Not Mess Foul Anymore! Change Best":"Fouls Smelly Stinky Odor 30 Days Rejected Offended";
+ document.getElementById('stat').innerText=ST.friend>50?"Parrots Cranes Flamingos Returned Shocked Owl Change Best Not Mess Foul Anymore":"Jungle Forest Owl Wants Befriendly Birds Last 30 Days Rejected Bad Smell";
+ let s=document.getElementById('qS');
+ s.innerHTML=`Clean ${Math.round(ST.clean)}% Oasis Coconut Tree Pond Clean Body Mess Remove Dirty Body Completely Cleans Own Body Nothing Fear Worry Danger<br>Friendship ${Math.round(ST.friend)}% Parrots Cranes Flamingos Many More Friendly Birds Forest Return Shocked Change Best<br>Good Attitude ${Math.round(ST.good)}% Change Moral State Returns Birds Friend Facing Good Attitude Than Offensive Foul Thoughts True Connections Needs True Good Costs<br>Oasis Ponds 3 Coconut Tree Pond - Go Clean Body Mess Remove Dirty Body<br>Enemies ${enemies.length} Crocodile Hi Bad Smell Owl Will You Be My Friend Teeths Wings Fly Faster Danger | Stinky Odor 30 Days Rejected | Confusing Big Trouble Danger Bad Costs<br>E Clean Body Oasis Pond Remove Dirty Body, R Echo Call Friends Parrots Cranes Flamingos Friendship Part<br>Goal Clean 88% + Friendship 65% - Change Best Not Mess Foul Anymore - Part Of Friendship Now`;
+ if(ST.xp>=100){ST.lv++; ST.xp=0; document.getElementById('lv').innerText=ST.lv; showM("LEVEL UP! Clean!");}
+}
+function win(){
+ document.getElementById('qM').innerText="AN OWL THAT FOULS - CLEANED - FRIENDSHIP RETURNED!";
+ document.getElementById('qD').innerHTML="An owl face the good consequence and never been the part of confusing and a big trouble anymore.<br><b>Moral Lesson: You might be learn to review your lesson. By only humble that you must been try to clean your own attitude. Or clean yourself because the reflection of others may affects if they will own or not. But if you wrongfully stinks your unrightful attitude then they will probably offend you. And some parts of it will not needed you help. Then suddenly put you in trouble or danger. That you must harshly escape the bad costs. Needy of friends never have a foul or smelly that stinks. Because a true connections needs a true good costs. Be they will be good all the time and not bad all the time for pride.</b>";
+ setTimeout(()=>alert("YOU WIN Chapter 71 An Owl That Fouls!\nJungle Forest Owl And Other Types Birds Parrots Cranes Flamingos Many More Most Friendly Birds Forest But Strange Bird Different Because Stinky Pleasant Odor Smells Living Birds Deny Not Washing Cleaning Properly Birds Body An Owl That Fouls First Morning Wants Befriendly Birds Last 30 Days Rejected Bad Smell Other Birds Wanted Foul Owl Because Offended Don't Befriend Creature Bad Odor Unpleasant Smell Unpleasant Animal Crocodile Foul Odor Too Wants Get Chase Owl Dinner Crocodile Hi Bad Smell Owl Will You Be My Friend Owl Yes I Am Befriend Crocodile Wanted Banish Stinky Smelly Owl But Because Owl Intelligent Avoid Teeths Crocodile Very Fast Help Owl's Wings Fly Faster Terms Danger Escapes Terrifying Creature Crocodile Jungle Foul Owl Goes Into Oasis Coconut Tree Pond Think Carefully Wants Have Friends Again Don't Want Seek Complain No Friends Live Been Offend Change Ethics An Owl That Fouls Trying Clean Body Mess Water Remove Dirty Body Completely Cleans Own Body Nothing Fear Worry Danger Already Change Itself Say Echos Until Other Bird Friends Rejected That Time Summons Help Birds Parrots Cranes Flamingos Returned Back To Owl Birds Shocked Owl It Seems Oh Can't Believe Looks Like Owl Change It's Best But Why So Clearly Not Mess Foul Anymore Owl It's Because I Needed You Because I Learn About You Birds Birds Well Yeah You Understand Us Tell Me Own Story Owl Dictated Own Story When Owl Lonely Trapped Crocodile Harshly Escaped Shows Not Offend Anymore If No One Will Offends Owl Must Been Changed For Good Needs Friends If You Change Better Not Smelly As It Offends Birds Understands Well Owl Nice Story For Now On You Will Part Of Our Friendship Now Owl Face Good Consequence Never Been Part Confusing Big Trouble Anymore Moral Learn Review Lesson By Only Humble Must Been Try Clean Own Attitude Or Clean Yourself Because Reflection Others May Affects If They Will Own Or Not But If Wrongfully Stinks Unrightful Attitude Then They Will Probably Offend You Some Parts Not Needed You Help Then Suddenly Put You Trouble Danger Must Harshly Escape Bad Costs Needy Friends Never Have Foul Smelly Stinks Because True Connections Needs True Good Costs Be They Will Be Good All Time Not Bad All Time For Pride"),800);
+}
+function animate(){
+ if(!on) return; requestAnimationFrame(animate);
+ let spd=0.15+ST.friend*0.001;
+ if(keys['w']) player.translateZ(-spd);
+ if(keys['s']) player.translateZ(spd*0.6);
+ if(keys['a']) player.translateX(-spd*0.7);
+ if(keys['d']) player.translateX(spd*0.7);
+ player.position.x=Math.max(-28,Math.min(28,player.position.x));
+ player.position.z=Math.max(-28,Math.min(28,player.position.z));
+ enemies.forEach(en=>{
+   if(en.position.distanceTo(player.position)<16){
+     en.lookAt(player.position);
+     let dir=new THREE.Vector3().subVectors(player.position,en.position).normalize().multiplyScalar(en.userData.boss?0.033:0.021);
+     en.position.add(dir);
+     if(en.position.distanceTo(player.position)<1.7){ST.clean=Math.max(0,ST.clean-0.12); ST.friend=Math.max(0,ST.friend-0.05);}
+   }
+ });
+ if(fp){camera.position.copy(player.position).add(new THREE.Vector3(0,1.2,0.3));}
+ else{let off=new THREE.Vector3(0,4.5,8.5).applyQuaternion(player.quaternion); camera.position.copy(player.position).add(off); camera.lookAt(player.position.clone().add(new THREE.Vector3(0,0.8,0)));}
+ let ctx=document.getElementById('map').getContext('2d');
+ ctx.clearRect(0,0,170,170); ctx.fillStyle="#000"; ctx.fillRect(0,0,170,170);
+ ctx.fillStyle="#142614"; ctx.fillRect(8,8,154,154);
+ ctx.fillStyle="#88ff66"; ctx.fillRect(85+player.position.x*1.6,85+player.position.z*1.6,4,4);
+ enemies.forEach(en=>{ctx.fillStyle="#ffaa00"; ctx.fillRect(85+en.position.x*1.6,85+en.position.z*1.6,3,3);});
+ ponds.forEach(f=>{ctx.fillStyle="#2244aa"; ctx.fillRect(85+f.position.x*1.6,85+f.position.z*1.6,5,5);});
+ if(ST.clean<=0){alert("Game Over! Owl Still Fouls Smelly Stinky Odor 30 Days Rejected Offended Bad Odor Unpleasant Smell! Go Oasis Coconut Tree Pond Clean Body Mess Remove Dirty Body Change Ethics Good Attitude True Connections Needs True Good Costs!"); location.reload();}
+ renderer.render(scene,camera);
+}
+</script>
+</body>
+</html>
